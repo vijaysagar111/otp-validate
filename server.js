@@ -34,4 +34,4 @@ app.get('/verify-number', async(req, res) => {
 })
 
 
-app.listen(2000,() => console.log('Server listening'))
+app.listen(process.env.PORT,() => console.log('Server listening'))
