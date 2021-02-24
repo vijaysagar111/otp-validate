@@ -6,7 +6,7 @@ const cors = require('cors');
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({extended:false}));
 app.use(cors());
-let url = 'mongodb://localhost:27017/pin_auth';
+let url = 'mongodb+srv://sagar:sagar@cluster0.xlv2b.mongodb.net/pin_auth?retryWrites=true&w=majority';
 
 app.get('/verify-number', async(req, res) => {
     const client = await mongodb.connect(url, {
